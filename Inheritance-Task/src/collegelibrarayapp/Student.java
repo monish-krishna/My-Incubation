@@ -32,6 +32,33 @@ public class Student {
        return issuedBooks;
    }
    
+   public int countIssuedBooks(){
+       return issuedBooks.size();
+   }
+   
+   public boolean haveIssuedBook(Book book){
+       return issuedBooks.contains(book);
+   }
+   
+   public byte getReturnCase(Book book){
+       if(issuedBooks.isEmpty()) return 0;
+       else if(issuedBooks.contains(book)) return 1;
+       return 2;
+   }
+   
+   public void addBook(Book book){
+       issuedBooks.add(book);
+       issuedHistory.add(book);
+   }
+   
+   public void removeBook(Book book){
+       issuedBooks.remove(book);
+   }
+   
+   public boolean canIssueBook(){
+       return (issuedBooks.size()>=0&&issuedBooks.size()<3);
+   }
+   
    public ArrayList<Book> getIssuedHistory(){
        return issuedHistory;
    }

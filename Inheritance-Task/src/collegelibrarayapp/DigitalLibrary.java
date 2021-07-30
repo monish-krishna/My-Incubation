@@ -6,7 +6,4 @@ public interface DigitalLibrary {
     public boolean allotSystem(int system,Student student);
     public void checkOut(int system,Student student);
     public void printCheckedInList();
-    default void print(){
-        System.out.println();
-    }
 }

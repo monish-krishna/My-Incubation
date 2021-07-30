@@ -38,7 +38,7 @@ public class Book {
     
     @Override
     public String toString(){
-        String s = String.format("%-11d | %-7s | %-30s | %-15s | %-6s",this.referenceNo,this.stream,this.name,this.authorName,(getAvailability())?("Available"):("Not AVailable"));
+        String s = String.format("%-11d | %-7s | %-33s | %-22s ",this.referenceNo,this.stream,this.name,this.authorName);
         return s;
     }
 }
